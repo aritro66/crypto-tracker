@@ -29,31 +29,28 @@ export default function Description() {
   const [coin, setCoin] = useState([]);
   const [flag, setflag] = useState(false);
   const [days, setDays] = useState(1);
-  var params = useParams();
-  const history = async () => {
-    axios.get(`https://api.coingecko.com/api/v3/coins/${params.id}/market_chart?vs_currency=usd&days=${days}`)
+  var {id} = useParams();
+  
+  // console.log(data);
+  useEffect(() => {
+    axios.get(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}`)
       .then((res) => {
         console.log(res.data.prices);
         setData(res.data.prices);
         setflag(true);
       })
       .catch((e) => console.log(e));
-  }
-
-  console.log(data);
-  useEffect(() => {
-    history();
-  }, [days]);
+  }, [days,id]);
 
   useEffect(() => {
-    axios.get(`https://api.coingecko.com/api/v3/coins/${params.id}`)
+    axios.get(`https://api.coingecko.com/api/v3/coins/${id}`)
       .then((res) => {
         console.log(res.data);
         setCoin(res.data);
 
       })
       .catch((e) => console.log(e));
-  }, []);
+  }, [id]);
 
   function dayChanger(e) {
     console.log(e.target.value)

@@ -1,0 +1,109 @@
+#home{
+    background-color: #393939;
+}
+
+#coin-list{
+    height:100vh;
+    width:950px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: auto;
+    color: #ffffff;
+    border: 2px solid rgb(153, 153, 153);
+}
+
+/* width */
+#coin-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+#coin-list::-webkit-scrollbar-corner
+    {
+        background-color:#393939;
+    }  
+  /* Track */
+#coin-list::-webkit-scrollbar-track {
+  background: #393939;
+}
+  
+  /* Handle */
+#coin-list::-webkit-scrollbar-thumb {
+  background: rgb(206, 206, 206);
+}
+
+#page-navigate{
+    display: flex;
+    justify-content: center;
+    margin-top:40px;
+    padding-bottom: 40px;
+}
+#page-navigate button{
+    color: #ffffff;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+.head-name{
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    /* margin-left: 10px; */
+    display: block;
+    text-decoration: none;
+    margin-left:140px;
+    color: #ffffff;
+}
+.head-symbol{
+    width:100px;
+    min-width: 100px;
+    max-width: 100px;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.head-price{
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.head-volume{
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.head-marketcap{
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.head-pricechange{
+    /* width: 200px; */
+}
+@media only screen and (max-width:1000px){
+    #coin-list{
+        width: 700px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width:750px){
+    #coin-list{
+        width: calc(100% - 20px);
+        margin: auto;
+    }
+}

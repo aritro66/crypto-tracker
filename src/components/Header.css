@@ -1,0 +1,19 @@
+#heading{
+    display:flex;
+    color:#ffffff;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding-top: 15px;
+    margin-bottom: 50px;
+    font-family: 'DM Serif Text';
+}
+
+#heading img{
+    height: 80px;
+    width:80px;
+}
+
+#heading p{
+    margin-left: 5px;
+}

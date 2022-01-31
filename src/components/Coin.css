@@ -1,0 +1,73 @@
+.coin{
+    width:900px;
+    height:50px;
+    padding: 5px;
+    padding-left: 10px;
+    display: flex;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.coin-image{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+
+.coin-sno{
+    width:70px;
+    min-width: 70px;
+    max-width: 70px;
+}
+
+.coin-name{
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    margin-left: 10px;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.coin-symbol{
+    width:100px;
+    min-width: 100px;
+    max-width: 100px;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.coin-price{
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.coin-volume{
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.coin-marketcap{
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.coin-pricechange{
+    /* width: 200px; */
+}

@@ -29,8 +29,8 @@ export default function Description() {
   const [coin, setCoin] = useState([]);
   const [flag, setflag] = useState(false);
   const [days, setDays] = useState(1);
-  var {id} = useParams();
-  
+  var { id } = useParams();
+
   // console.log(data);
   useEffect(() => {
     axios.get(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}`)
@@ -40,7 +40,7 @@ export default function Description() {
         setflag(true);
       })
       .catch((e) => console.log(e));
-  }, [days,id]);
+  }, [days, id]);
 
   useEffect(() => {
     axios.get(`https://api.coingecko.com/api/v3/coins/${id}`)
@@ -70,7 +70,7 @@ export default function Description() {
       <p>{coin.name}</p>
       <br />
       <h2>Description</h2>
-      <p dangerouslySetInnerHTML={{ __html: coin.description.en }} />
+      {coin.description.en === "" ? <p>Null</p> : <p dangerouslySetInnerHTML={{ __html: coin.description.en }} />}
       <br />
       <h2>MarketCap Rank</h2>
       <p>{coin.market_cap_rank}</p>
@@ -146,7 +146,7 @@ export default function Description() {
             },
             title: {
               display: true,
-              text: `${days===1?"Price Chart (24 hours)":`Price Chart (${days} days)`}`,
+              text: `${days === 1 ? "Price Chart (24 hours)" : `Price Chart (${days} days)`}`,
               color: "#ffffff"
             },
           },
